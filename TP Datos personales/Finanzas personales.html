@@ -1,37 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html> 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Gestion de finanzas personales</title>
+  <title>Gestión de Finanzas Personales</title>
 
   <style>
-      .graficos {
-        display: flex;         /* Coloca los elementos en fila */
-        gap: 20px;             /* Espacio entre gráficos */
-        flex-wrap: wrap;       /* Para que salten de línea si no entra en pantallas chicas */
-      }
-      .graficos > div, 
-      .graficos > object {
-        flex: 1;               /* Cada gráfico ocupa mismo ancho */
-        min-width: 400px;      /* Para que no se achiquen demasiado */
-      }
-    </style>
-  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .graficos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .graficos > div, 
+    .graficos > object, 
+    .graficos > iframe {
+      flex: 1;
+      min-width: 400px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .conclusion {
+      background: #eaf7ea;
+      border-left: 6px solid #2e7d32;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Título en forma de pregunta -->
-  <h2>¿Como gestionar mis gastos personales?</h2>
-  </t>A lo largo de esta pagina veremos diferentes metricas y graficos para analizar los gastos personales. Tambien podremos ver como se categoriza cada categoria al mismo tiempo, ver como afecta la inflacion en los montos destinados a cada una.</t>
-  <div style="min-height:513px" id="datawrapper-vis-VVsN1"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/VVsN1/embed.js" charset="utf-8" data-target="#datawrapper-vis-VVsN1"></script><noscript><img src="https://datawrapper.dwcdn.net/VVsN1/full.png" alt="¿Cuál es el efecto de la inflación?¿y cual no? (Line chart)" /></noscript></div>
-  <object data="Grafico_de_distribucion_mensual_promedio.svg" type="image/svg+xml"></object>
-  
-  <div class="graficos">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/24831574"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24831574/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-    <div class="flourish-embed flourish-chart" data-src="visualisation/25244263"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/25244263/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+  <h2>¿Cómo gestionar mis gastos personales?</h2>
+  <p class="intro">
+    A lo largo de esta página veremos diferentes métricas y gráficos que nos permiten analizar los gastos personales. 
+    Podremos observar cómo se distribuyen las categorías de consumo y, lo más importante, cómo afecta la inflación en los montos destinados a cada una.
+  </p>
+
+  <!-- Gráfico 1 -->
+  <div class="card">
+    <h3>Impacto de la inflación en los gastos</h3>
+    <div style="min-height:513px" id="datawrapper-vis-VVsN1">
+      <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/VVsN1/embed.js" charset="utf-8" data-target="#datawrapper-vis-VVsN1"></script>
+      <noscript><img src="https://datawrapper.dwcdn.net/VVsN1/full.png" alt="Inflación y gastos" /></noscript>
+    </div>
   </div>
 
-  <iframe title="Infovis - TP Datos Personales" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMTE2MjA1ZmItY2FmMy00NDc5LThjMmUtMmU5NzM5Y2MyZTA1IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
-  
+  <!-- Gráfico 2 -->
+  <div class="card">
+    <h3>Distribución mensual promedio</h3>
+    <object data="Grafico_de_distribucion_mensual_promedio.svg" type="image/svg+xml" width="100%"></object>
+  </div>
+
+  <!-- Gráficos comparativos -->
+  <div class="card">
+    <h3>Comparación de categorías</h3>
+    <div class="graficos">
+      <div class="flourish-embed flourish-chart" data-src="visualisation/24831574">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/24831574/thumbnail" width="100%" alt="chart visualization" /></noscript>
+      </div>
+      <div class="flourish-embed flourish-chart" data-src="visualisation/25244263">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/visualisation/25244263/thumbnail" width="100%" alt="chart visualization" /></noscript>
+      </div>
+    </div>
+  </div>
+
+  <!-- Power BI -->
+  <div class="card">
+    <h3>Análisis interactivo en Power BI</h3>
+    <iframe title="Infovis - TP Datos Personales" width="100%" height="400" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiMTE2MjA1ZmItY2FmMy00NDc5LThjMmUtMmU5NzM5Y2MyZTA1IiwidCI6ImExZjUwYTk3LTIxYzAtNDlhNy1hOWQ0LWYyNDRlYmI0MmRhNyIsImMiOjR9" 
+            frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+
+  <!-- Conclusión -->
+  <div class="conclusion">
+    <h3>Conclusión</h3>
+    <p>
+      Analizar los gastos sin considerar la inflación puede llevar a interpretaciones equivocadas. 
+      Deflactar la serie permite comparar los valores en términos reales, entendiendo qué categorías realmente crecieron en consumo 
+      y cuáles solo aumentaron por el efecto inflacionario. Esto es clave para tomar decisiones financieras acertadas y planificar el futuro con mayor claridad.
+    </p>
+  </div>
 </body>
 </html>
+
