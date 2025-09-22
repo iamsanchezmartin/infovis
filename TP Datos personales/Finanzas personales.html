@@ -4,15 +4,32 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Gestion de finanzas personales</title>
+
+  <style>
+      .graficos {
+        display: flex;         /* Coloca los elementos en fila */
+        gap: 20px;             /* Espacio entre gráficos */
+        flex-wrap: wrap;       /* Para que salten de línea si no entra en pantallas chicas */
+      }
+      .graficos > div, 
+      .graficos > object {
+        flex: 1;               /* Cada gráfico ocupa mismo ancho */
+        min-width: 400px;      /* Para que no se achiquen demasiado */
+      }
+    </style>
+  
 </head>
 <body>
   <!-- Título en forma de pregunta -->
   <h2>¿Como gestionar mis gastos personales?</h2>
   </t>A lo largo de esta pagina veremos diferentes metricas y graficos para analizar los gastos personales. Tambien podremos ver como se categoriza cada categoria al mismo tiempo, ver como afecta la inflacion en los montos destinados a cada una.</t>
+  <div style="min-height:513px" id="datawrapper-vis-VVsN1"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/VVsN1/embed.js" charset="utf-8" data-target="#datawrapper-vis-VVsN1"></script><noscript><img src="https://datawrapper.dwcdn.net/VVsN1/full.png" alt="¿Cuál es el efecto de la inflación?¿y cual no? (Line chart)" /></noscript></div>
   <object data="Grafico_de_distribucion_mensual_promedio.svg" type="image/svg+xml"></object>
+  
+<div class="graficos">
   <div class="flourish-embed flourish-chart" data-src="visualisation/24831574"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/24831574/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
   <div class="flourish-embed flourish-chart" data-src="visualisation/25244263"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/25244263/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  <div style="min-height:513px" id="datawrapper-vis-VVsN1"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/VVsN1/embed.js" charset="utf-8" data-target="#datawrapper-vis-VVsN1"></script><noscript><img src="https://datawrapper.dwcdn.net/VVsN1/full.png" alt="¿Cuál es el efecto de la inflación?¿y cual no? (Line chart)" /></noscript></div>
-
+</div>
+  
 </body>
 </html>
